@@ -1,0 +1,31 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 30px;
+    background-color: papayawhip;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+}
+
+.formItem {
+    display: table-row;
+    align-self: center;
+    width: 40%;
+}
+
+.formLabel {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.formInput {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.formAction {
+    margin-top: 30px;
+}

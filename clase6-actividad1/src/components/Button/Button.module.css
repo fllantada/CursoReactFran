@@ -1,0 +1,23 @@
+.button {
+    text-decoration: none;
+    border-radius: 25;
+    margin: 10px;
+    width: auto;
+    padding: 10px;
+    font-size: 10px;
+    background: green;
+    border-radius: 8px;
+    flex: none;
+    display: flex;
+    order: 1;
+    align-self: center;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    border: none;
+    border-style: none;
+    cursor: pointer;
+    outline: inherit;
+}
