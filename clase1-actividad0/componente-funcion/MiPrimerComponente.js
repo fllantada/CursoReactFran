@@ -1,25 +1,19 @@
 function MiPrimerComponente() {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        flexDirection: "column",
-        alignItems: "center",
-        border: "1px solid black",
-      }}
-    >
-      <h1>Titulo de componente padre</h1>
-      <button>Boton</button>
+    <div className='mi padre'>
+      <h1>Hey luke i am your father </h1>
       <MiSegundoComponente />
-      <MiTercerComponente />
+      <MiSegundoComponente />
+      <MiSegundoComponente />
+      <MiSegundoComponente />
+      <MiSegundoComponente />
     </div>
   );
 }
 
 function MiSegundoComponente() {
   return (
-    <h1 style={{ border: "1px solid red" }}>Este es mi segundo componente</h1>
+    <p style={{ border: "1px solid red" }}>Este es mi segundo componente</p>
   );
 }
 
