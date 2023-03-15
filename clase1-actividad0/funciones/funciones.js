@@ -14,7 +14,7 @@ let mivariable2 = Sumar(2, 3);
 
 console.log("Mi variable 2 es ? ", mivariable2);
 
-GuardarSumas(Multiplicar);
+GuardarSumas();
 
 function GuardarSumas(variableFuncion) {
   console.log(variableFuncion(2, 3));
