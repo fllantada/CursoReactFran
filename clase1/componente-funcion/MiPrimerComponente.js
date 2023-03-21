@@ -2,18 +2,19 @@ function MiPrimerComponente() {
   return (
     <div className='mi padre'>
       <h1>Hey luke i am your father </h1>
-      <MiSegundoComponente />
-      <MiSegundoComponente />
-      <MiSegundoComponente />
-      <MiSegundoComponente />
-      <MiSegundoComponente />
+      <MiSegundoComponente varaible1={() => "Esto es una prop"} />
     </div>
   );
 }
 
-function MiSegundoComponente() {
+function MiSegundoComponente(props) {
   return (
-    <p style={{ border: "1px solid red" }}>Este es mi segundo componente</p>
+    <div>
+      <p style={{ border: "1px solid red" }}>
+        {props.varaible1()}
+        <MiTercerComponente />
+      </p>
+    </div>
   );
 }
 
