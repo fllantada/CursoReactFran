@@ -6,7 +6,7 @@ function Contenedor(props) {
   return (
     <div
       style={{
-        backgroundColor: "red",
+        backgroundColor: "grey",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -14,7 +14,7 @@ function Contenedor(props) {
         height: "100vh",
       }}
     >
-      <Nav />
+      <Nav imprimi="Hola" saluda={() => console.log("Saludando")} />
       <Section />
       <Footer />
     </div>
