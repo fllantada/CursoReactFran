@@ -1,4 +1,4 @@
-.button {
+button {
     text-decoration: none;
     border-radius: 25;
     margin: 10px;
@@ -20,4 +20,13 @@
     border-style: none;
     cursor: pointer;
     outline: inherit;
+}
+
+p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+    margin: 0;
+    padding: 0;
 }
