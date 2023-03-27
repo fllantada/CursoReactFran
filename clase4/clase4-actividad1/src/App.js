@@ -11,12 +11,12 @@ function App() {
   // const nuevoColor = data[0]; // valor
   // const setNuevoColor = data[1]; // funcionDeActualizacion
 
-  const [nuevoColor, setNuevoColor] = useState("green");
+  const [colorFondo, setNuevoColor] = useState("green");
 
   //const nuevoColor = "green";
 
   return (
-    <div className="App" style={{ backgroundColor: `${nuevoColor}` }}>
+    <div className="App" style={{ backgroundColor: `${colorFondo}` }}>
       <Button color="blue" label="mi boton1" callback={setNuevoColor} />
       <Button color="red" label="mi boton2" callback={setNuevoColor} />
     </div>
