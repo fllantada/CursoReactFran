@@ -34,7 +34,12 @@
     background-color: #ddd;
     color: #222;
   }
-  
+  .inputContainer {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: 1rem 0;
+  }
  
   
  
