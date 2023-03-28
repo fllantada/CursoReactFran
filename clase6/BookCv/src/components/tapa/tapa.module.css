@@ -1,0 +1,11 @@
+
+    .parrafoTapa {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border-bottom: 5px solid #4e4242;
+    padding: 1rem 0;
+  }
+  
