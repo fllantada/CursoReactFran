@@ -3,18 +3,28 @@ import React from "react";
 const App = () => {
   return (
     <div>
-      <Title>
+      <CustomContainer>
+
+        
         {
           //aca van los nodos hijos}
         }
         <NodoHijo />
-      </Title>
+
+
+      </CustomContainer>
     </div>
   );
 };
-const Title = (props) => {
+const CustomContainer = (props) => {
   //aca se pueden encapsular los nodos hijos
-  return <>{props.children}</>;
+  return (
+    <div>
+      <h1>Todo tiene este titulo en mi web</h1>
+
+      {props.children}
+    </div>
+  );
 };
 
 const NodoHijo = () => {

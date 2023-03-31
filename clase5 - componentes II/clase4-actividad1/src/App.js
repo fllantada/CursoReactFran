@@ -7,7 +7,7 @@ const App = () => {
         {
           //aca van los nodos hijos}
         }
-        <NodoHijo />
+        <h1>NODOS HIJOS</h1>
       </Title>
     </div>
   );
