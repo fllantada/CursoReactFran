@@ -1,23 +1,13 @@
-//informacion externa a mi componente
-import axios from "axios";
-
-function getRandomImages(qty) {
-  //feetch random images from an API
-  //return an array of images
-  const images = [];
-
+async function getMemoryCards(qty) {
+  const urls = [];
   for (let i = 0; i < qty; i++) {
-    ß;
-    axios
-      .get("https://dog.ceo/api/breeds/image/random")
-      .then((response) => {
-        console.log(response.data.message);
-        images.push(response.data.message);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    const respuesta = await fetch("https://picsum.photos/200/200/?random");
+    const url = respuesta.url;
+    urls.push(url);
   }
+
+  console.log(urls);
+  return urls;
 }
 
-export default getContenido;
+export default getMemoryCards;
