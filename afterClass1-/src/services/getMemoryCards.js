@@ -1,13 +1,12 @@
 async function getMemoryCards(qty) {
-  const urls = [];
+  const urlImagenes = [];
   for (let i = 0; i < qty; i++) {
     const respuesta = await fetch("https://picsum.photos/200/200/?random");
     const url = respuesta.url;
-    urls.push(url);
+    urlImagenes.push(url);
   }
 
-  console.log(urls);
-  return urls;
+  return urlImagenes;
 }
 
 export default getMemoryCards;

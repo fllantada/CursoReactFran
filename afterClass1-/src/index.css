@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code');
 
 body {
-  margin: 0;
+  margin: 20px 20px;
   font-family: 'Fira Code', monospace;
+  display : flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
 }
 
 code {

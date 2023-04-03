@@ -1,25 +1,16 @@
 import React, { useState, useEffect } from "react";
-import getMemoryCards from "./services/getContenido";
+import getMemoryCards from "./services/getMemoryCards";
 
 const MemoryGame = () => {
   const [cards, setCards] = useState([]);
 
-  useEffect(() => {
-    const imagesPromise = getMemoryCards(10);
-    imagesPromise.then((images) => {
-      setCards(images);
-    });
-  }, []);
+  //recursos externos que voy a necesitar
+
+  useEffect(() => {}, []);
 
   console.log(cards);
 
-  return (
-    <div>
-      {cards.map((card, index) => {
-        return <img src={card} alt="card" key={index} />;
-      })}
-    </div>
-  );
+  return <div> Bienvenido a mi juego</div>;
 };
 
 export default MemoryGame;
