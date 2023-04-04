@@ -1,7 +1,11 @@
-import CONFIG from "../config/config";
+const getData = async (height, width) => {
+  let url = "";
 
-const getData = (height, width) => {
-  //formato url de la api: https://picsum.photos/height/width/?random
+  const response = await fetch(
+    `https://picsum.photos/${height}/${width}/?random`
+  );
+  url = response.url;
+  return url;
 };
 
 export default getData;
