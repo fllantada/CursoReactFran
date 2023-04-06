@@ -3,26 +3,15 @@ import Container from "./components/container/Container";
 import getData from "./services/getData";
 import getImages from "./services/getImages";
 import { useState, useEffect } from "react";
-
+import useImages from "./hooks/useImages";
+import Title from "./components/title/Title";
 function App() {
-  const [foto, setFoto] = useState();
-  const [images, setImages] = useState();
-
-  useEffect(() => {
-    getData(600, 600).then((data) => {
-      setFoto(data);
-    });
-
-    getImages(10).then((data) => {
-      setImages(data);
-      console.log(data);
-    });
-  }, []);
-
+  const [images, loading] = useImages(5);
+  const audioSlave = "Audio Slave";
   return (
     <>
-      <Container>
-        <h1>Solicitud de servicios</h1>
+      <Container loadingProp={loading}>
+        <Title text="Mi Web" />
         <input type="text" placeholder="Escribí algo acá..." />
         {/* <img src={foto} /> */}
         {images &&
