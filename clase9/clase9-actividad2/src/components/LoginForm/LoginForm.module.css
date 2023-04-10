@@ -1,0 +1,23 @@
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formItem {
+    display: table-row;
+    align-self: center;
+}
+
+.formLabel {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.formInput {
+    margin-bottom: 10px;
+}
+
+.formAction {
+    margin-top: 30px;
+}
