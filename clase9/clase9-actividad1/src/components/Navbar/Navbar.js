@@ -1,15 +1,17 @@
-import styles from './Navbar.module.css'
-import { NavLink } from "react-router-dom"
+import styles from "./Navbar.module.css";
+import { Link } from "react-router-dom";
+import Styles from "./Navbar.module.css";
 
-const Navbar = () => {
-    return (
-        <header>
-            <nav className={styles.nav}>
-                <NavLink to='/' className={({ isActive }) => isActive ? styles.navItemActive : styles.navItem}>Home</NavLink>
-                <NavLink to='/tasks' className={({ isActive }) => isActive ? styles.navItemActive : styles.navItem}>Tareas</NavLink>
-            </nav>
-        </header>
-    )
-}
+const Navbar = (props) => {
+  return (
+    <header>
+      <nav className={styles.nav}>
+        <Link to={"/"}>Home</Link>
+        <Link to={"/tasklist"}>TaskList</Link>
+        <Link to={"/products"}>Products</Link>
+      </nav>
+    </header>
+  );
+};
 
-export default Navbar
+export default Navbar;

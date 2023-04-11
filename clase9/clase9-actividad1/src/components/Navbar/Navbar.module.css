@@ -56,3 +56,8 @@
     cursor: pointer;
     outline: inherit;
 }
+a{
+    text-decoration: none;
+    color: #000;
+}
+
