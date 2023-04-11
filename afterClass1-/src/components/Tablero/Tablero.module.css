@@ -1,0 +1,14 @@
+.contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  min-width: 500px;
+  min-height: 300px;
+  border: 1px solid black;
+  border-radius: 10px;
+}

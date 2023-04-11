@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from "react";
-import getMemoryCards from "./services/getMemoryCards";
+
+import Container from "./components/Container/Container";
+import Title from "./components/Title/Title";
+import Puntuacion from "./components/Puntuacion/Puntuacion";
+import Tablero from "./components/Tablero/Tablero";
 
 const MemoryGame = () => {
-  const [cards, setCards] = useState([]);
-
   //recursos externos que voy a necesitar
 
-  useEffect(() => {}, []);
-
-  console.log(cards);
-
-  return <div> Bienvenido a mi juego</div>;
+  return (
+    <Container>
+      {" "}
+      <Title text="Bienvenido a mi juego" />
+      <Puntuacion />
+      <Tablero cartas={8} />
+    </Container>
+  );
 };
 
 export default MemoryGame;
