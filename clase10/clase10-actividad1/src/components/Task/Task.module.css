@@ -1,0 +1,12 @@
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    padding: 20px;
+    margin: 30px;
+    font-size: 10px;
+    background-color: papayawhip;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+}
