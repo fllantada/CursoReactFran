@@ -11,6 +11,7 @@ const MemoryGame = () => {
   return (
     <Container>
       {" "}
+      <img src="images/samsung20.jpg" />
       <Title text="Bienvenido a mi juego" />
       <Puntuacion />
       <Tablero cartas={8} />

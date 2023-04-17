@@ -1,0 +1,2 @@
+itemdetailcontainer llama al async mock como el de itemList pero solo devuelve 1 item, ese item que devuelve lo guarda en un estado (state) y se lo pasa a itemDetail.
+itemDetail tiene que usar ese item y mostrar descripcion, foto, precio.
