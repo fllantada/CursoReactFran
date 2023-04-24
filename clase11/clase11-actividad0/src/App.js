@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import TaskListContainer from "./components/TaskListContainer/TaskListContainer";
 import Login from "./components/Login/Login";
-import CursosContextProvider from "./components/ContextProviders/CrusosProvider/CursosContextProvider";
+import CursosContextProvider from "./ContextProviders/CrusosProvider/CursosContextProvider";
 
 function App() {
   return (
