@@ -1,25 +1,25 @@
-import { useContext } from 'react'
-import TaskList from '../TaskList/TaskList'
+import { useContext } from "react";
+import TaskList from "../TaskList/TaskList";
 
-import { TasksContext } from '../../context/TaskContext'
+import { ProductContext } from "../../context/TaskContext";
 
 const TaskListContainer = () => {
-    const {loading, tasks} = useContext(TasksContext)
-    
-    if(loading) {
-        return (
-            <main>
-                <h1>Cargando tareas...</h1>
-            </main>
-        )
-    }
+  const { loading, tasks } = useContext(ProductContext);
 
+  if (loading) {
     return (
-        <main>
-            <h1>Lista de tareas</h1>
-            <TaskList {...{tasks}} />
-        </main>
-    )
-}
+      <main>
+        <h1>Cargando tareas...</h1>
+      </main>
+    );
+  }
 
-export default TaskListContainer
+  return (
+    <main>
+      <h1>Lista de tareas</h1>
+      <TaskList {...{ tasks }} />
+    </main>
+  );
+};
+
+export default TaskListContainer;
