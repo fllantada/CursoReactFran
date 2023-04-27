@@ -1,45 +1,57 @@
 import db from "../../../config/firebase";
-import { createTaskAdaptedFromFirestore } from "../../../adapters/taskAdapter";
 
 import {
   collection,
   getDocs,
+  addDoc,
   getDoc,
+  where,
   query,
+  updateDoc,
   orderBy,
   doc,
 } from "firebase/firestore";
+import { fromDbToApp, fromAppToDb } from "../adapters/dataAdapter";
 
-export const getTasks = async () => {
-  //paso 0 en la contrucion de db
+//create
+export const guardameEstaData = async (que, donde) => {
+  const collectionRef = collection(db, donde);
 
-  const collectionRef = collection(db, "productos");
-
-  console.log("1)Creo collectionRef", collectionRef);
-
-  const queryRef = query(collectionRef); //de productos traeme todo
-
-  console.log("2)Creo la query", queryRef); //de products quiero todo
-
-  const queryResult = await getDocs(queryRef); // buscar en firestore
-
-  console.log("3)Ejecuto la query", queryResult.docs.length);
-
-  const tasksAdapted = queryResult.docs.map((doc) =>
-    createTaskAdaptedFromFirestore(doc)
-  );
-
-  console.log("6)Tengo los resultados mapeados", tasksAdapted);
-
-  return tasksAdapted;
+  const response = await addDoc(collectionRef, que);
 };
 
-function getAllData() {}
+//query general
+export const dameTodaLaData = async (donde) => {
+  const collectionRef = collection(db, donde);
+  const queryRef = query(collectionRef);
+  const result = await getDocs(queryRef);
 
-function postData() {}
+  const dataAdapted = result.docs.map((doc) => fromDbToApp(doc));
+  console.log(dataAdapted);
+  return dataAdapted;
+};
 
-function getData() {}
+export const modificameEstaData = async (que, donde) => {
+  // 1) Modifico el objeto de App para que sea como el de base de datos
+  const dataAdapted = fromAppToDb(que);
 
-function updateData() {}
+  const docRef = doc(db, donde, dataAdapted.id);
 
-function deleteData() {}
+  const response = await updateDoc(docRef, {
+    [dataAdapted.artista]: dataAdapted.artista.toUpperCase(),
+  });
+
+  return response;
+};
+
+export const eliminameEstaData = async (que, donde) => {};
+
+//query con filtro
+export const dameTodaLaDataRock = async (donde) => {
+  const collectionRef = collection(db, donde);
+  const queryRef = query(collectionRef, where("tipo", "==", "rock"));
+  const result = await getDocs(queryRef);
+  const dataAdapted = result.docs.map((doc) => fromDbToApp(doc));
+  console.log(dataAdapted);
+  return dataAdapted;
+};
