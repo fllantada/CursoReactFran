@@ -4,11 +4,9 @@ import {
   collection,
   getDocs,
   addDoc,
-  getDoc,
   where,
   query,
   updateDoc,
-  orderBy,
   doc,
 } from "firebase/firestore";
 import { fromDbToApp, fromAppToDb } from "../adapters/dataAdapter";
@@ -29,6 +27,34 @@ export const dameTodaLaData = async (donde) => {
   const dataAdapted = result.docs.map((doc) => fromDbToApp(doc));
   console.log(dataAdapted);
   return dataAdapted;
+};
+
+export const getAll = async () => {
+  const collectionRef = collection(db, "Artistas");
+  const queryRef = query(collectionRef);
+  const result = await getDocs(queryRef);
+  const dataAdapted = result.docs.map((doc) => fromDbToApp(doc));
+  console.log(dataAdapted);
+  return dataAdapted;
+};
+
+export const cambiarPop = async (id) => {
+  const docRef = doc(db, "Artistas", id);
+
+  const response = await updateDoc(docRef, {
+    tipo: "Rock",
+  });
+  return response;
+};
+//cambiar Rock cambiar a Pop cambiar a Reggaeton....  DRY
+
+export const cambiarTipo = async (id, tipo) => {
+  const docRef = doc(db, "Artistas", id);
+
+  const response = await updateDoc(docRef, {
+    tipo: tipo,
+  });
+  return response;
 };
 
 export const modificameEstaData = async (que, donde) => {

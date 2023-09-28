@@ -1,6 +1,22 @@
-# Getting Started with Create React App
+# Proyecto ecomerce React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esto lo hice durante la cursada de React en CoderHouse. Es un proyecto de ecomerce de una tienda de detailing.
+
+### Autor : Francisco Llantada
+
+Tabla:
+
+| Nombre    | Apellido | Legajo | Correo |
+| --------- | -------- | ------ | ------ |
+| Francisco | Llantada | 12345  |
+
+## codigo embebido
+
+### codigo embebido en linea
+
+Para instalar la dependencia de react-router-dom, ejecutar el comando:
+
+`npm install react-router-dom`
 
 ## Available Scripts
 

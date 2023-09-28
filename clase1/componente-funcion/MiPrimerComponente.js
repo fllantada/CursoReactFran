@@ -1,13 +1,13 @@
 function MiPrimerComponente() {
   return (
-    <div className='mi padre'>
+    <div className="mi padre">
       <h1>Hey luke i am your father </h1>
-      <MiSegundoComponente varaible1={() => "Esto es una prop"} />
+      <MiSegundoComponente condition={true} />
     </div>
   );
 }
 
-function MiSegundoComponente(props) {
+function MiSegundoComponente({ condition }) {
   return (
     <div>
       <p style={{ border: "1px solid red" }}>
